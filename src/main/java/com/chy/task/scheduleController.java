@@ -12,5 +12,6 @@ public class scheduleController {
     @Scheduled(cron="0/5 * * * * ?")
     private void configureTasks() {
         System.err.println("执行静态定时任务时间: " + LocalDateTime.now());
+        System.err.println("执行静态定时任务时间: " + LocalDateTime.now().toLocalTime());
     }
 }
