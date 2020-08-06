@@ -5,7 +5,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.chy.mybatis.mappers")
+@MapperScan(value = {"com.chy.*.mappers"})
 public class StartProject {
     public static void main(String[] args) {
         SpringApplication.run(StartProject.class,args);
