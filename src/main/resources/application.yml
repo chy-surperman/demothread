@@ -1,4 +1,8 @@
 spring:
+  mvc:
+    view:
+      prefix: /JSP/
+      suffix: .jsp
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/socks?characterEncoding=utf-8&useSSL=false&serverTimezone=UTC
     driverClassName: com.mysql.cj.jdbc.Driver
@@ -6,7 +10,13 @@ spring:
     password: 123456
     type: com.alibaba.druid.pool.DruidDataSource
 
+
+
 mybatis:
   #config-locations: mybatis/mybatis-config.xml
   mapper-locations: com/chy/mybatis/mappers/*.xml
   type-aliases-package: com.chy.mybatis.entities
+server:
+  port: 8080
+  servlet:
+    context-path: /web
