@@ -14,14 +14,14 @@
         }
 
         .btn {
-            width: 7rem;
-            margin-left: 1.0rem;
+            width: 6rem;
+            margin-left: 0.2rem;
         }
 
         .input-item-text {
             background-color: white;
             padding-left: 4px;
-            width: 12rem;
+            width: 20rem;
         }
 
         .mark {
@@ -49,6 +49,7 @@
         <input id="clear" type="button" class="btn" value="清除"/>
         <input id="search" type="button" class="btn" value="查询"/>
         <input id="save" type="button" class="btn" value="保存"/>
+        <input id="return" type="button" class="btn" value="返回"/>
     </div>
 </div>
 <script type="text/javascript"
@@ -103,6 +104,7 @@ function regeoCode() {
     });
 }
 
+
 function clear() {
     map.remove(markers);
     markers = [];
@@ -135,8 +137,11 @@ function save() {
 document.getElementById("regeo").onclick = regeoCode;
 document.getElementById("clear").onclick = clear;
 document.getElementById("save").onclick = save;
+document.getElementById("return").onclick = fanhui;
 var linesearch;
-
+function fanhui(){
+    lnglats.pop();
+}
 /*公交线路查询*/
 function lineSearch() {
     var busLineName = document.getElementById('BusLineName').value;

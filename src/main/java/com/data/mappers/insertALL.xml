@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.data.mappers.insertALL">
+
+  <select id="insertGpsData" parameterType="gpsData" resultType="Integer">
+    insert  into gpsreport_20200817(vehicleId,latitude,longitude,createTime,direction,speed) values (#{vehicleId},#{latitude},#{longitude},#{createTime},#{direction},#{speed});
+  </select>
+</mapper>
+
